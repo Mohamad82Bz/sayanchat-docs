@@ -2,7 +2,7 @@
 
 <figure><img src=".gitbook/assets/sayanchat.png" alt=""><figcaption></figcaption></figure>
 
-Welcome to the **SayanChat** documentation. SayanChat is a Minecraft: Java Edition plugin designed to enhance the chat experience on your server. It provides variety of features to manage and customize chat interactions, ensuring a seamless and rich chat experience for players.
+Welcome to the **SayanChat** documentation. SayanChat is a Minecraft: Java Edition spigot/paper plugin designed to enhance the chat experience on your server. It provides variety of features to manage and customize chat interactions, ensuring a seamless and rich chat experience for players.
 
 ## Key Features
 
