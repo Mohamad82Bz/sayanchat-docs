@@ -46,10 +46,13 @@ pooling-size: 5 # Connection pooling size. 5 is suitable for most servers. incre
 
 ### Proxy Installation
 
-1. Download the Plugin
+!!! info
+    SayanChat supports Velocity and Bungeecord (including Waterfall) proxies.
+
+1. Install the Plugin
     - Place the downloaded jar file inside the `plugins` folder.
 2. Restart the Proxy
     - Restart your Proxy server to load the plugin.
 
-!!! hint
+!!! info
     SayanChat does not require any configuration or database connection on the proxy. There is only rules configuration, which also exists on the server side. The proxy one will be applied to all servers.
