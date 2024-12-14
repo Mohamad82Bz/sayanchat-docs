@@ -5,10 +5,6 @@ This guide covers the configuration and usage of announcements in SayanChat.
 !!! note
     All formats in this documentation use Adventure MiniMessage. For a guide on how to use the format, please refer to [MiniMessage Documentation](https://docs.advntr.dev/minimessage/index.html).
 
-# Announcement Configuration
-
-This page covers the configuration and usage of announcements in SayanChat.
-
 ## Command Usage
 
 To use the announcement command, you need to provide a message that must be quoted with double quotations. The command also supports several flags to modify its behavior:
