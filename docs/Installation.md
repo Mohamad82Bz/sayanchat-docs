@@ -23,7 +23,7 @@
 #### Database Configuration
 For single server installations, SQLite is suitable. However, for multi-server owners for network-wide features like synchronized chat boxes and chat history, a MySQL or MariaDB database is required. To configure the database, follow these steps:
 
-!!! warning "If you're using MariaDB"
+??? warning "If you're using MariaDB"
     Unlike most places, If you are using MariaDB, you must use the `MARIADB` method in the configuration file. The `MYSQL` method will not work with MariaDB.
 
 1. Make sure you have run the plugin at least once to generate the configuration files.
