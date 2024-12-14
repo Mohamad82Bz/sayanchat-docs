@@ -69,7 +69,7 @@ announcement:
 ### AutoAnnounce Configuration
 
 ```yaml
-autoAnnounce:
+auto-announce:
   enabled: false
   random: false
   interval: 900
