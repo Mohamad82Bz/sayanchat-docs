@@ -5,15 +5,20 @@ This guide covers the configuration and usage of announcements in SayanChat.
 !!! note
     All formats in this documentation use Adventure MiniMessage. For a guide on how to use the format, please refer to [MiniMessage Documentation](https://docs.advntr.dev/minimessage/index.html).
 
-## Command Usage
+## Command
 
-To use the announcement command, you need to provide a message that must be quoted with double quotations. The command also supports several flags to modify its behavior:
+### Flags
+
+There are a few flags that can be used with the `/announcement` command:
 
 - **global** or **g**: This flag indicates that the announcement should be broadcast globally to all players.
 - **preview** or **p**: This flag allows you to preview the announcement. The preview will only be visible to the player who issued the command.
 - **raw** or **r**: This flag indicates that the message should be sent without any formatting.
 
-### Example
+### Examples
+
+!!! warning
+    The message argument must be quoted with double quotations.
 
 Here is an example of how to use the announcement command:
 
