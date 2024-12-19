@@ -24,7 +24,7 @@ This page covers the configuration of various settings in SayanChat.
     - **message**: A `Placeholder` object for the message.
 
 !!! tip "Prefix/Suffix Serializers"
-    Set the serializers based on your prefix/suffix formatting. For example if you use legacy color codes in your prefix/suffix, set the serializer to `LEGACY_SECTION`.
+    Set the serializers based on your prefix/suffix formatting. For example if you use legacy color codes in your prefix/suffix, set the serializer to `LEGACY_AMPERSAND`.
 
 - **custom-placeholders**: A list of [Custom Placeholder](Objects/CustomPlaceholder.md) objects representing custom placeholders.
 - **notifier**: A `Notifier` object representing the notifier settings.
