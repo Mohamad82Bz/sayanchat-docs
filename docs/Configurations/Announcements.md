@@ -17,13 +17,10 @@ There are a few flags that can be used with the `/announcement` command:
 
 ### Examples
 
-!!! warning
-    The message argument must be quoted with double quotations.
-
 Here is an example of how to use the announcement command:
 
 ```plaintext
-/announcement "This is a test announcement" --global
+/announcement This is a test announcement --global
 ```
 
 In this example, the message "This is a test announcement" will be broadcast globally to all players.
@@ -31,7 +28,7 @@ In this example, the message "This is a test announcement" will be broadcast glo
 Another example with the preview flag:
 
 ```plaintext
-/announcement "This is a preview announcement" --preview
+/announcement This is a preview announcement --preview
 ```
 
 In this example, the message "This is a preview announcement" will only be visible to the player who issued the command.
@@ -39,7 +36,7 @@ In this example, the message "This is a preview announcement" will only be visib
 Using the raw flag:
 
 ```plaintext
-/announcement "This is a raw announcement" --raw
+/announcement This is a raw announcement --raw
 ```
 
 In this example, the message "This is a raw announcement" will be sent without any formatting.
