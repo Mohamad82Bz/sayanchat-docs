@@ -1,5 +1,27 @@
 site_name: SayanChat Docs
 site_url: https://sayandev.org/sayanchat
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Features: features.md
+  - Commands: commands.md
+  - Permissions: permissions.md
+  - Placeholders and Tags: placeholders-tags.md
+  - Configuration:
+      - Settings: configuration/settings.md
+      - Storage: configuration/storage.md
+      - Chat Boxes: configuration/chatboxes.md
+      - Announcements: configuration/announcements.md
+      - Default Colors: configuration/defaultcolors.md
+      - Language: configuration/language.md
+      - Rules: configuration/rules.md
+      - Rule Settings: configuration/rulesettings.md
+      - Server Aliases (Proxy): configuration/server-aliases.md
+  - API:
+      - Overview: api/overview.md
+      - ChatBox API: api/chatbox-api.md
+      - Node API: api/node-api.md
+      - Events: api/events.md
 theme:
   name: material
   features:

@@ -1,58 +1,60 @@
-# Installation
+﻿# Installation
 
 !!! warning "Internet Connection Required"
-    SayanChat requires an active internet connection to download external libraries. Ensure your server is connected to the internet during the initial startup.
+    SayanChat downloads external libraries on first startup. Make sure your server has internet access.
 
-### Bukkit Installation
+## Bukkit/Paper Installation
 
-#### Plugin Installation
+1. Drop the SayanChat jar into `plugins/`.
+2. Start the server once to generate configs in `plugins/SayanChat/`.
+3. Stop the server and configure `storage.yml`, `settings.yml`, and other files as needed.
+4. Start the server again.
 
-1. Download the Plugin
-    - Download the SayanChat Bukkit jar file.
-2. Install the Plugin
-    - Place the downloaded jar file inside the `plugins` folder.
-3. Restart the Server
-    - Restart your Minecraft server to load the plugin.
-4. (If you are running a Proxy server)
-    - Change `server-id` in the `settings.yml` file to the server ID of the server you are running the plugin on.
-    - Follow Database Configuration steps below.
+## Proxy Installation (Velocity/Bungee)
+
+1. Drop the SayanChat proxy jar into the proxy `plugins/` folder.
+2. Start the proxy once to generate configs in `plugins/sayanchat/`.
+3. Configure `storage.yml` and `server_aliases.yml` if needed.
 
 !!! info
-    If you have a proxy server with two or more servers, make sure to connect to a MySQL/MariaDB database.
+    The proxy side handles rules and server aliasing. Most chat behavior is configured on the Bukkit/Paper servers.
 
-#### Database Configuration
-For single server installations, SQLite is suitable. However, for multi-server owners for network-wide features like synchronized chat boxes and chat history, a MySQL or MariaDB database is required. To configure the database, follow these steps:
+## Database Configuration
 
-??? warning "If you're using MariaDB"
-    Unlike most places, If you are using MariaDB, you must use the `MARIADB` method in the configuration file. The `MYSQL` method will not work with MariaDB.
+For a single server, SQLite works out of the box. For networks, use MariaDB or MySQL.
 
-1. Make sure you have run the plugin at least once to generate the configuration files.
-2. Open the `storage.yml` file located in the `plugins/SayanChat` folder.
-3. Configure the database settings as follows:
-``` { .yaml .no-copy }
-method: SQLITE # Options: SQLITE, MYSQL, MARIADB
+Open `plugins/SayanChat/storage.yml` and set:
+
+```yaml
+method: SQLITE # SQLITE, MYSQL, MARIADB
 ```
-4. (If you chose `MYSQL` or `MARIADB`, configure the database settings)
-``` .yaml
-host: localhost # Database host
-port: 3306 # Database port
-database: minecraft # Database name
-username: user # Database username
-password: password # Database password
-use-ssl: false # Use SSL for database connection
-pooling-size: 5 # Connection pooling size. 5 is suitable for most servers. increase if you have a large player base and when you see database slow down.
+
+If you use MySQL or MariaDB, also configure the connection section:
+
+```yaml
+host: localhost
+port: 3306
+database: minecraft
+username: user
+password: password
+use-ssl: false
+pooling-size: 5
 ```
-5. Save the file and restart the server.
 
-### Proxy Installation
+!!! warning "MariaDB"
+    Use `method: MARIADB`. `MYSQL` will not work with MariaDB.
 
-!!! info
-    SayanChat supports Velocity and Bungeecord (including Waterfall) proxies.
+## Redis Messaging (Recommended for Networks)
 
-1. Install the Plugin
-    - Place the downloaded jar file inside the `plugins` folder.
-2. Restart the Proxy
-    - Restart your Proxy server to load the plugin.
+SayanChat uses Redis for cross-server messaging when proxy/network features are enabled.
 
-!!! info
-    SayanChat does not require any configuration or database connection on the proxy. There is only rules configuration, which also exists on the server side. The proxy one will be applied to all servers.
+In `storage.yml`, set:
+
+```yaml
+messaging-method: REDIS
+redis:
+  host: localhost
+  port: 6379
+  user: ''
+  password: ''
+```
