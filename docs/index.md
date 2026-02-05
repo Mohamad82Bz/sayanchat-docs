@@ -1,5 +1,10 @@
 ﻿# SayanChat Documentation
 
+<figure markdown="span">
+  ![SayanChat logo](assets/sayanchat-logo.png)
+</figure>
+
+
 SayanChat is a Minecraft (Spigot/Paper/Proxy) chat plugin focused on clean, organized chat experiences for players and staff. It adds chat boxes, private messages, history, mentions, default colors, announcements, and powerful moderation rules.
 
 ## Quick Links
